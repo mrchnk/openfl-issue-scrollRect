@@ -11,10 +11,12 @@ Issue is special case of those conditions:
 When using that way, scrollRect is ignored and full BitmapData is drawn scaled down into scrollRect area.
 
 Actual result:
+--------------
 
-![actual](pub/actial.png)
+![actual](pub/actual.png)
 
 Expected result:
+----------------
 
 ![expected](pub/expected.png)
 
@@ -28,4 +30,6 @@ Known workarounds
 How to run
 ----------
 
-You need to serve [pub](pub) subfolder using any http server, after that, navigate to [.../index.html](pub/index.html)
+You can serve [pub](pub) subfolder using any http server, after that, navigate to [.../index.html](pub/index.html)
+
+... or just [run it using htmlpreview.github.io](https://htmlpreview.github.io/?https://github.com/mrchnk/openfl-issue-scrollRect/blob/master/pub/index.html)

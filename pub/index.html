@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>openfl issue demonstration</title>
+  <script src="howler.js"></script>
+  <script src="pako.js"></script>
+  <script src="openfl.js"></script>
+</head>
+
+<body>
+  <script>
+
+  const { Stage, Sprite, Bitmap, BitmapData } = openfl.display;
+  const { Rectangle } = openfl.geom;
+
+  main('canvas');
+  //main('webgl');
+
+  function main(renderer) {
+
+    const stage = new Stage(200, 200, 0x00FF00, Sprite, {
+      renderer: renderer
+    });
+
+    BitmapData.loadFromFile('sprite-sheet.png').onComplete(bitmapData => {
+      const bitmap = new Bitmap(bitmapData);
+      const rect = new Rectangle(0, 354, 95, 120);
+      bitmap.scrollRect = rect;
+      bitmap.x = Math.round((stage.stageWidth - rect.width) / 2);
+      bitmap.y = Math.round((stage.stageHeight - rect.height) / 2);
+      stage.addChild(bitmap);
+    });
+
+    document.body.appendChild(stage.element);
+  }
+
+  </script>
+</body>
+
+</html>

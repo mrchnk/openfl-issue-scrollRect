@@ -33,3 +33,8 @@ How to run
 You can serve [pub](pub) subfolder using any http server, after that, navigate to [.../index.html](pub/index.html)
 
 ... or just [run it using htmlpreview.github.io](https://htmlpreview.github.io/?https://github.com/mrchnk/openfl-issue-scrollRect/blob/master/pub/index.html)
+
+Issue
+-----
+
+Track issue status at https://github.com/openfl/openfl/issues/2446
